@@ -1,0 +1,255 @@
+body{
+    background: #e2dcdc;
+}
+
+/* la div content */
+.content{
+    background: white;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* la class pour le retour à la normal du flux que j'utilise après chaque partie dans mon html */
+.clear{
+    clear: both;
+}
+
+header{
+    font-size: 10px;
+    padding-top: 50px;
+}
+/* style pour le mini titre et le grand titre (h1) */
+header,h1{
+    text-align: center;
+    margin: 0 auto;
+}
+/* les deux tret au dessus et en dessous du h1 */
+h1::before, h1::after{                         
+    content: "";
+    height: 1px;
+    width: 300px;
+    background: black;
+    display: block;
+    margin: 0 auto;
+}
+
+/* le menu dans la nav */
+nav ul li{
+    list-style: none;
+    display: inline;
+    font-style: italic;
+    font-size: 12px;
+}
+
+nav ul{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+
+/*dimension pour tous les h2  */
+h2{
+    margin: 150px 0 0 0;
+}
+
+/*dimension pour tous les p  */
+p{
+    margin-top: 0;
+}
+
+/* Début menu 1 : "LE PLAT"  */
+.menu1{
+    margin-top: 100px;
+    background: url('../img/plate.jpg') no-repeat left;
+    height: 512px; 
+
+}
+
+.text1 span{
+    font-size: 12px;
+    margin: 0;
+}
+
+.text1 .span{
+    font-style: italic;
+
+}
+
+.text1{
+    float: right;
+    width: 180px;
+    margin-top: 200px;
+    padding-right: 100px;
+}
+
+.text1 .span::after{
+    content: "";
+    height: 1px;
+    width: 500px;
+    background: black;
+    float: right;
+    margin-right: 50px;
+}
+
+    /* Début menu 2 : "LA SALLE"  */
+
+.menu2{
+    margin-top: 20px;
+    background: url('../img/resto_01.jpg') no-repeat;
+    background-position: right;
+    height: 490px;
+}
+
+.menu2 .text2{
+    float: left;
+    margin-left: 50px; 
+    width: 430px;
+
+}
+
+
+
+.text2 h2::after{
+    content: "";
+    height: 1px;
+    width: 435px;
+    background: black;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+    /* Début menu 3 : "LE SERVICE"  */                    
+
+.menu3{
+    background: url('../img/resto_02.jpg') no-repeat;
+    background-size: 490px;
+    background-position: left;
+    height: 400px;
+}
+
+
+.menu3 .text3{
+    float: right;
+    margin-right: 50px; 
+    width: 430px;
+
+}
+
+.text3 h2::after{
+    content: "";
+    height: 1px;
+    width: 435px;
+    background: black;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+ /* Début menu 4 : "LE DRESSAGE"  */ 
+
+
+ .menu4{
+    /* margin-top: 20px; */
+    background: url('../img/resto_03.jpg') no-repeat;
+    background-position: right;
+    height: 490px;
+}
+
+
+.menu4 .text4{
+    float: left;
+    margin-left: 50px; 
+    width: 430px;
+
+}
+
+.text4 h2::after{
+    content: "";
+    height: 1px;
+    width: 435px;
+    background: black;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Début menu 5 : "LE GOÛT"  */ 
+
+.menu5{
+    background: url('../img/resto_04.jpg') no-repeat;
+    background-size: 490px;
+    background-position: left;
+    height: 450px;
+}
+
+.menu5 .text5{
+    float: right;
+    margin-right: 50px; 
+    width: 430px;
+}
+
+.text5 h2::after{
+    content: "";
+    height: 1px;
+    width: 435px;
+    background: black;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* LE FOOTER */
+
+footer{
+    height: 400px;
+    background: url('../img/plan.png') no-repeat;
+    background-position: 430px 90px;
+}
+
+footer span{
+    padding-left: 455px;
+    display: inline-block;
+    margin-top: 130px;
+    font-size: 20px;
+}
+
+
+#footer{
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    margin-top: 90px;
+}
+
+#footer::before{
+    content: "";
+    height: 1px;
+    width: 300px;
+    background: black;
+    display: block;
+    margin: 0 auto;
+}
+
+#footer::after{
+    content: "";
+    height: 1px;
+    width: 300px;
+    background: black;
+    display: block;
+    margin: 0 auto;
+}
+
+.adress{
+    text-align: center;
+    padding-left: 330px;
+    margin: 0 auto;
+}
+
+.tel{
+    text-align: center;
+    display: block;
+
+}
