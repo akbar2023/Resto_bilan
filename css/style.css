@@ -2,7 +2,7 @@ body{
     background: #e2dcdc;
 }
 
-/* la div content */
+/* la div content qui contien tout le contenu*/
 .content{
     background: white;
     width: 1000px;
@@ -50,7 +50,7 @@ nav ul{
 
 /*dimension pour tous les h2  */
 h2{
-    margin: 150px 0 0 0;
+    margin: 100px 0 0 0;
 }
 
 /*dimension pour tous les p  */
@@ -58,12 +58,29 @@ p{
     margin-top: 0;
 }
 
+
 /* Début menu 1 : "LE PLAT"  */
 .menu1{
     margin-top: 100px;
     background: url('../img/plate.jpg') no-repeat left;
+    background-position-x: 50px;
     height: 512px; 
 
+}
+
+/* le texte en italic "Exemple de plat" de la class .span */
+.text1 .span{
+    font-style: italic;
+
+}
+
+/* tret bas du txt en italic */
+.text1 .span::after{
+    content: "";
+    height: 1px;
+    width: 500px;
+    background: black;
+    float: right;
 }
 
 .text1 span{
@@ -71,29 +88,17 @@ p{
     margin: 0;
 }
 
-.text1 .span{
-    font-style: italic;
 
-}
-
-.text1{
+.text1{   /* style pour tous les textes du 1èr menu */
     float: right;
+    text-align: right;
     width: 180px;
     margin-top: 200px;
     padding-right: 100px;
 }
 
-.text1 .span::after{
-    content: "";
-    height: 1px;
-    width: 500px;
-    background: black;
-    float: right;
-    margin-right: 50px;
-}
 
-    /* Début menu 2 : "LA SALLE"  */
-
+/* Début menu 2 : "LA SALLE"  */
 .menu2{
     margin-top: 20px;
     background: url('../img/resto_01.jpg') no-repeat;
@@ -101,7 +106,8 @@ p{
     height: 490px;
 }
 
-.menu2 .text2{
+/* style du texte pour .menu 2 et .menu4 */
+.menu2 .text2, .menu4 .text4{
     float: left;
     margin-left: 50px; 
     width: 430px;
@@ -109,19 +115,7 @@ p{
 }
 
 
-
-.text2 h2::after{
-    content: "";
-    height: 1px;
-    width: 435px;
-    background: black;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-    /* Début menu 3 : "LE SERVICE"  */                    
-
+/* Début menu 3 : "LE SERVICE"  */                    
 .menu3{
     background: url('../img/resto_02.jpg') no-repeat;
     background-size: 490px;
@@ -129,54 +123,24 @@ p{
     height: 400px;
 }
 
-
-.menu3 .text3{
+/* style texte de .menu3 et .menu5 esnsemble car code similaire  */
+.menu3 .text3, .menu5 .text5{
     float: right;
     margin-right: 50px; 
     width: 430px;
 
 }
 
-.text3 h2::after{
-    content: "";
-    height: 1px;
-    width: 435px;
-    background: black;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
 
- /* Début menu 4 : "LE DRESSAGE"  */ 
-
-
+ /* Début menu 4 : "LE DRESSAGE" */ 
  .menu4{
-    /* margin-top: 20px; */
     background: url('../img/resto_03.jpg') no-repeat;
     background-position: right;
     height: 490px;
 }
 
 
-.menu4 .text4{
-    float: left;
-    margin-left: 50px; 
-    width: 430px;
-
-}
-
-.text4 h2::after{
-    content: "";
-    height: 1px;
-    width: 435px;
-    background: black;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-/* Début menu 5 : "LE GOÛT"  */ 
-
+/* Début menu 5 : "LE GOÛT" */ 
 .menu5{
     background: url('../img/resto_04.jpg') no-repeat;
     background-size: 490px;
@@ -184,13 +148,9 @@ p{
     height: 450px;
 }
 
-.menu5 .text5{
-    float: right;
-    margin-right: 50px; 
-    width: 430px;
-}
-
-.text5 h2::after{
+/* style pour le tret bas du .menu2 .menu3 .menu4 et .menu5   car même code */
+/* Attention car lors de l'affichage si le zoom est trop faible les trets disparaîsse */
+.text2 h2::after, .text3 h2::after, .text4 h2::after, .text5 h2::after{
     content: "";
     height: 1px;
     width: 435px;
@@ -200,16 +160,23 @@ p{
     padding: 0;
 }
 
+/* la note pour tous les menus */
+#note{
+    color: white; 
+    background : black;
+    width: 200px;
+}
 
-/* LE FOOTER */
 
-footer{
+/* ---------Le Footer--------- */
+footer{    
     height: 400px;
     background: url('../img/plan.png') no-repeat;
     background-position: 430px 90px;
 }
 
-footer span{
+/* "city guide" dans le plan de paris */
+footer span{    
     padding-left: 455px;
     display: inline-block;
     margin-top: 130px;
@@ -217,14 +184,15 @@ footer span{
 }
 
 
-#footer{
+#septime{
     font-size: 40px;
     display: block;
     text-align: center;
     margin-top: 90px;
 }
 
-#footer::before{
+/* les deux trets pour SEPTIME */
+#septime::before, #septime::after{ 
     content: "";
     height: 1px;
     width: 300px;
@@ -233,23 +201,10 @@ footer span{
     margin: 0 auto;
 }
 
-#footer::after{
-    content: "";
-    height: 1px;
-    width: 300px;
-    background: black;
-    display: block;
-    margin: 0 auto;
-}
 
-.adress{
-    text-align: center;
-    padding-left: 330px;
-    margin: 0 auto;
-}
-
-.tel{
+.adresse{
     text-align: center;
     display: block;
+    font-weight: 900;
 
 }
